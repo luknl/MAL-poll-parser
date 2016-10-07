@@ -15,6 +15,7 @@ How it works :
 -if graph=0 : a list of all episodes displaying the episodes by % of 5/5 votes in descending order.<br/><br/>
 
 ![alt tag](https://myanimelist.cdn-dena.com/images/anime/5/79697.jpg)
+![alt tag](https://myanimelist.cdn-dena.com/images/anime/5/79697.jpg)
 
 # Instructions
 - Choose an anime in the home page or choose your anime like this :<br>
