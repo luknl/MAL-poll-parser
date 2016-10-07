@@ -8,8 +8,8 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.7/css/materialize.min.css">
     <link rel="stylesheet" href="assets/css/style.css" media="screen" title="no title">
 
-    <? require_once 'simple_html_dom.php';
-    require 'header.php';?>
+    <? require_once 'includes/simple_html_dom.php';
+    require 'includes/header.php';?>
     <div class="container">
         <ul class="collapsible" data-collapsible="accordion">
             <li>

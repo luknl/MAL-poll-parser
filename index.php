@@ -10,9 +10,9 @@
 </head>
 
 <body>
-    <?require 'header.php';?>
+    <?require 'includes/header.php';?>
     <div class="container">
-        <h3>MAL poll parser to Chart</h3>
+        <h3>MAL Poll Parser to Chart</h3>
 
         <ul class="collapsible" data-collapsible="accordion">
             <li>
@@ -43,7 +43,7 @@
         </ul>
 
         <?
-        require_once 'simple_html_dom.php';
+        require_once 'includes/simple_html_dom.php';
 
         $url = 'https://myanimelist.net/anime/season';
         $curl = curl_init();
@@ -85,7 +85,6 @@
         </div>
 
     </div>
-    <?require 'footer.php';?>
 </body>
 
   <script src="https://ajax.googleapis.com/ajax/libs/jquery/2.2.2/jquery.min.js"></script>

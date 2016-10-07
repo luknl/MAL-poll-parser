@@ -14,12 +14,8 @@ How it works :
 -if no graph filter : a chart of episodes by 5/5 votes.<br/>
 -if graph=0 : a list of all episodes displaying the episodes by % of 5/5 votes in descending order.<br/><br/>
 
-![alt tag](http://img4.hostingpics.net/pics/420101Capturedecran20161007a210850.png)
-![alt tag](http://img4.hostingpics.net/pics/177338Capturedecran20161007a210906.png)
 ![alt tag](http://img4.hostingpics.net/pics/920377Capturedecran20161007a210728.png)
-![alt tag](http://img4.hostingpics.net/pics/292630Capturedecran20161007a210326.png)
-![alt tag](http://img4.hostingpics.net/pics/257751Capturedecran20161007a210206.png)
-![alt tag](http://img4.hostingpics.net/pics/444750Capturedecran20161007a205753.png)
+![alt tag](http://img4.hostingpics.net/pics/420101Capturedecran20161007a210850.png)
 
 # Instructions
 - Choose an anime in the home page or choose your anime like this :<br>
