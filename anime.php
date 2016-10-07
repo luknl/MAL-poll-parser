@@ -12,7 +12,23 @@
     <?
     require_once 'simple_html_dom.php';
 
-    print_r('<div class="container">');
+    ?><div class="container">
+
+        <ul class="collapsible" data-collapsible="accordion">
+            <li>
+                <div class="collapsible-header">Details</div>
+                <div class="collapsible-body">
+
+                    <table>
+                        <tr>
+                            <th>Episode</th>
+                            <th>5/5</th>
+                            <th>4/5</th>
+                            <th>3/5</th>
+                            <th>2/5</th>
+                            <th>1/5</th>
+                        </tr>
+    <?
     // Anime episode URL
     $animeId = $_GET['anime'];
     $anime = 'https://myanimelist.net/anime/' . $animeId . '/episode';
@@ -38,6 +54,10 @@
     else{
         $length = $_GET['length']; // Change length to low number for tests, otherwise parsing is way to long for animes with ep > 10
     }
+
+    // Anime infos
+    $anime_image = $html->find('.js-scrollfix-bottom .ac',0)->src;
+    $anime_title = $html->find('#contentWrapper .h1 span',0)->innertext;
 
     // Start for loop to get scores from all the episodes
     for ($i = 0; $i < $length; ++$i)
@@ -76,36 +96,32 @@
        if($arr[10] == ''){$arr[10] = 0;}
        if($arr[14] == ''){$arr[14] = 0;}
        if($arr[18] == ''){$arr[18] = 0;}
-
-       if (!isset($_GET['detail']) || $_GET['detail'] == '1') {
            ?>
-           <ul class="collapsible" data-collapsible="accordion">
-               <li>
-                   <div class="collapsible-header">Detailed</div>
-                   <div class="collapsible-body">
-                       <?
-                       print_r('<p>'.$episode.'</p>');
-                       //Only way I found to display episode scores is with those weird arrays
-                       print_r('<p>5 stars : '.$arr[2].' / '.$arr[3].'</p>');
-                       print_r('<p>4 stars : '.$arr[6].' / '.$arr[7].'</p>');
-                       print_r('<p>3 stars : '.$arr[10].' / '.$arr[11].'</p>');
-                       print_r('<p>2 stars : '.$arr[14].' / '.$arr[15].'</p>');
-                       print_r('<p>1 star : '.$arr[18].' / '.$arr[19].'</p>');
-                       ?>
-                   </div>
-               </li>
-           </ul>
-           <?
-       }
-       else if ($_GET['detail'] == '0'){
-       }
+           <!-- Display html array -->
+               <tr>
+                   <td><?print_r(preg_replace("/[^a-zA-Z0-9-&;]/", " ", substr($episode,-2)))?></td>
+                   <td><?print_r($arr[3].' ('.$arr[2].')')?></td>
+                   <td><?print_r($arr[7].' ('.$arr[6].')')?></td>
+                   <td><?print_r($arr[11].' ('.$arr[10].')')?></td>
+                   <td><?print_r($arr[15].' ('.$arr[14].')')?></td>
+                   <td><?print_r($arr[19].' ('.$arr[18].')')?></td>
+               </tr>
+<?
 
        $arr2[$i] = $arr;
        $arr = [];
     }
+    ?>
+                    </table>
+                    <!-- Legend -->
+                    <p>% of votes by episode / ( ) = number of votes
+                </div>
+            </li>
+        </ul>
 
-    ////// Results //////
-    print_r('<br><h3>Results</h3>');
+        <h3><?print_r($anime_title)?></h3>
+        <img src="<?print_r($anime_image)?>" alt="<?print_r($anime_title)?>" />
+        <?
 
     $tab_score = array();
 
@@ -133,8 +149,8 @@
            print_r('<p>'.$tab_score[$k].'</p>');
         }
     }
-    print_r('</div>');
     ?>
+</div>
 </head>
 
 

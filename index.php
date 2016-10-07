@@ -41,7 +41,6 @@
                                  - length --> how many episodes (from ep 1) you want to display (default = none)<br>
                                  - graph --> 0 = no graph, only array / 1 = show graph (default = 1)<br>
                                  - sort (if graph = 0) --> 0 = sort in episode number / 1 = sort by best episodes (default = 1)<br>
-                                 - detail -> 0 = don't show ratings (1 to 5) by episode / 1 = show... (default = 1)<br>
                              </p>
                            </div>
                          </div>
@@ -54,7 +53,7 @@
         <?
         require_once 'simple_html_dom.php';
 
-        $url = 'https://myanimelist.net/anime/season/2016/summer';
+        $url = 'https://myanimelist.net/anime/season';
         $curl = curl_init();
         curl_setopt($curl, CURLOPT_URL, $url);
         curl_setopt($curl, CURLOPT_RETURNTRANSFER, 1);
@@ -72,7 +71,7 @@
 
         // Which html element we want to select
         $node1 = '.season #myanimelist #contentWrapper .js-categories-seasonal .seasonal-anime .title .title-text a.link-title';
-        $node2 = '#myanimelist  div#content table.top-ranking-table .ranking-list .detail a.hoverinfo_trigger'
+        $node2 = '#myanimelist  div#content table.top-ranking-table .ranking-list .detail a.hoverinfo_trigger';
 
         ?>
         <div class="row">
