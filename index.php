@@ -29,19 +29,12 @@
                              --> take the {anime id}/{anime name} in the url of the anime page in MAL (ex "30015/ReLIFE") and put it after the url (ex "anime.php?anime=30015/ReLIFE")<br><br>
                                  You can then add 1 or more filters like this : "&{filter}={value}" after the url</p>
 
-                                 <h3 class="filters">Filters</h3>
-                                 <p>
-                                 -- Mendatory --<br>
-
-                                 - anime --> take the {anime id}/{anime name} in the url of the anime page (ex 30015/ReLIFE)<br><br>
-
-
-                                 -- Optional --<br>
-
-                                 - length --> how many episodes (from ep 1) you want to display (default = none)<br>
-                                 - graph --> 0 = no graph, only array / 1 = show graph (default = 1)<br>
-                                 - sort (if graph = 0) --> 0 = sort in episode number / 1 = sort by best episodes (default = 1)<br>
-                             </p>
+                             <h3 class="filters">Filters</h3>
+                             <p>
+                             - length --> how many episodes (from ep 1) you want to display (default = none, max = 25)<br>
+                             - graph --> 0 = no graph, only array / 1 = show graph (default = 1)<br>
+                             - sort (if graph = 0) --> 0 = sort in episode number / 1 = sort by best episodes (default = 1)
+                            </p>
                            </div>
                          </div>
                        </div>
