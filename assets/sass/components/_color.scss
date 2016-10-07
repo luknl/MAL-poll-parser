@@ -331,6 +331,10 @@ $grey: (
   "darken-4":   #212121
 );
 
+$mal-blue: (
+  "base":       #2E51A2
+);
+
 $shades: (
   "black":        #000000,
   "white":        #FFFFFF,
@@ -358,7 +362,8 @@ $colors: (
   "brown": $brown,
   "blue-grey": $blue-grey,
   "grey": $grey,
-  "shades": $shades
+  "shades": $shades,
+  "mal-blue": $mal-blue
 );
 
 
@@ -409,4 +414,3 @@ $colors: (
   @warn "Unknown `#{name}` in $colors.";
   @return null;
 }
-
